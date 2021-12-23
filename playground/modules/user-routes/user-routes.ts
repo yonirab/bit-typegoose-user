@@ -5,12 +5,12 @@ type TRoutesInput = {
   app: Application;
 };
 
-export default ({ app }: TRoutesInput) => {
+export const userRoutes = ({ app }: TRoutesInput) => {
   app.post("/api/users", async (req, res) => {
     const user = await createUser({
       username: req.body.username,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
       password: req.body.password,
     });
 
@@ -23,8 +23,3 @@ export default ({ app }: TRoutesInput) => {
     return res.send(user);
   });
 };
-
-
-export function userRoutes() {
-  return 'Hello world!';
-}

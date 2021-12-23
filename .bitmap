@@ -33,6 +33,12 @@
         "mainFile": "index.ts",
         "rootDir": "playground/modules/user-controller"
     },
+    "modules/user-main": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "playground/modules/user-main"
+    },
     "modules/user-routes": {
         "scope": "",
         "version": "",

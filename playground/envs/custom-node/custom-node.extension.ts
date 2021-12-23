@@ -1,6 +1,7 @@
 import { EnvsMain, EnvsAspect } from '@teambit/envs'
 import { NodeAspect, NodeMain } from '@teambit/node'
 import { TsConfigTransformer, TypescriptConfigMutator } from '@teambit/typescript';
+import { previewConfigTransformer, devServerConfigTransformer } from './webpack/webpack-transformers';
 
 
 export class CustomNodeExtension {
@@ -23,7 +24,11 @@ export class CustomNodeExtension {
             devConfig: [transformer],
           }
         ),
-        node.overrideJestConfig(require.resolve('./jest/jest.config'))
+        node.overrideJestConfig(require.resolve('./jest/jest.config')),
+        node.useWebpack({
+             previewConfig: [previewConfigTransformer],
+             devServerConfig: [devServerConfigTransformer],
+        })
         
     ])
 
