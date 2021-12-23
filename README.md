@@ -8,5 +8,6 @@ for modeling the the data.
 # Prerequisites
 
 [Install bit](https://teambit-community-apps-bit-dev.netlify.app/docs/quick-start)
+
 [docker compose](https://docs.docker.com/compose/) is used for running a mongo db instance
 
