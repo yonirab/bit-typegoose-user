@@ -1,1 +1,1 @@
-export { typegooseUserModel } from './typegoose-user-model';
+export { typegooseUserModel, UserModel, findByUsername } from './typegoose-user-model';

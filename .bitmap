@@ -27,5 +27,11 @@
         "mainFile": "index.ts",
         "rootDir": "playground/modules/user-controller"
     },
+    "modules/user-routes": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "playground/modules/user-routes"
+    },
     "$schema-version": "14.9.0"
 }

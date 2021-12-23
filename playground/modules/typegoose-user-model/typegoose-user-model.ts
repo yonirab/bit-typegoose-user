@@ -1,30 +1,30 @@
 import { prop, getModelForClass } from "@typegoose/typegoose";
 
-enum Gender {
-  male = "male",
-  female = "female",
-}
-
 export class User {
   @prop({ type: () => String, required: true, unique: true })
-  public username: string;
+  public username!: string;
+
+  @prop({ type: () => String })
+  public firstname?: string;
+
+  @prop({ type: () => String })
+  public lastname?: string;
 
   @prop({ type: () => String, required: true })
-  public firstName: string;
-
-  @prop({ type: () => String, required: true })
-  public lastName: string;
-
-  @prop({ type: () => String, enum: Object.values(Gender) })
-  public gender: string;
+  public password!: string;
 
   public get fullName() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.firstname} ${this.lastname}`;
   }
+
 }
 
-const UserModel = getModelForClass(User);
+export const UserModel = getModelForClass(User);
+
+export const findByUsername = async (username) =>
+  await UserModel.findOne(username);
+
 
 export function typegooseUserModel() {
-  return UserModel;
+  return 'Hello world!';
 }

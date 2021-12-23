@@ -83,11 +83,10 @@
       "teambit.react/react": {}
     },
     /**
-       * configures components with namespaces 'entities', 'modules' and 'functions' to use the 
-       * default NodeJS dev environment.
+       * configures components with namespaces 'entities', 'modules' and 'functions' to use 
+       * a customized NodeJS dev environment.
       */
     "{entities/**}, {modules/**}, {functions/**}": {
-      //"": {}
       "yonirab.playground/envs/custom-node": {}
     },
     /**
@@ -99,7 +98,7 @@
     /**
        * configures components with namespaces 'envs' and 'aspects' to use the default Aspect development environment.
       */
-    "{envs/**}, {aspects/**}, {extensions/**}": {
+    "{envs/**}, {aspects/**}": {
       "teambit.harmony/aspect": {}
     }
   }

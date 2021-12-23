@@ -1,19 +1,24 @@
-import { typegooseUserModel } from '@yonirab/playground.modules.typegoose-user-model';
+import { UserModel, findByUsername } from '@yonirab/playground.modules.typegoose-user-model';
 
 export async function createUser({
   username,
-  firstName,
-  lastName,
-  gender,
+  firstname,
+  lastname,
+  password,
 }: any) {
-  const user = await typegooseUserModel().create({
+  const user = await UserModel.create({
     username,
-    gender,
-    firstName,
-    lastName,
+    firstname,
+    lastname,
+    password
   });
 
   return user;
+}
+
+export async function findUser(username: string) {
+    const user = await findByUsername(username);
+    return user;
 }
 
 
