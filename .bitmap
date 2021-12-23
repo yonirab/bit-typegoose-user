@@ -15,6 +15,12 @@
         "mainFile": "index.ts",
         "rootDir": "playground/envs/custom-node"
     },
+    "modules/mongo-connector": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "playground/modules/mongo-connector"
+    },
     "modules/typegoose-user-model": {
         "scope": "yonirab.playground",
         "version": "0.0.1",
